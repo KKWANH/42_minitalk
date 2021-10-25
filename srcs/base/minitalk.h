@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:38:47 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/25 19:25:32 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/25 19:33:09 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@
 # define ANSI_MAG "\e[0;35m"
 # define ANSI_CYA "\e[0;36m"
 
-int	ft_strlen(char *_str);
-int	ft_atoi(char *_str);
+int		ft_strlen(char *_str);
+int		ft_atoi(char *_str);
 void	ft_putstr(char *_str);
 void	ft_putchar(char _chr);
 void	ft_putnbr(int _num);
