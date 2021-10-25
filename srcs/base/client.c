@@ -6,21 +6,19 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:38:29 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/25 17:12:48 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/25 19:17:17 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void	_ft_client_bitChanger
-(int _num)
+void	_ft_client_bitChanger(int _num)
 {
 	(void)_num;
 	g_bites._bit >>= 1;
 }
 
-struct sigaction	ft_client_option
-(unsigned long int *_len, char **_arv)
+struct sigaction	ft_client_option(unsigned long int *_len, char **_arv)
 {
 	struct sigaction	_act;
 
@@ -32,8 +30,7 @@ struct sigaction	ft_client_option
 	return (_act);
 }
 
-int	main
-(int _arc, char **_arv)
+int	main(int _arc, char **_arv)
 {
 	struct sigaction	_act;
 	unsigned long int	_len;

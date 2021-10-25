@@ -6,14 +6,13 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 18:20:19 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/25 18:30:47 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/25 19:16:57 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen
-(char *_str)
+int	ft_strlen(char *_str)
 {
 	int	_cnt;
 
@@ -23,8 +22,7 @@ int	ft_strlen
 	return (_cnt);
 }
 
-int	ft_atoi
-(char *_str)
+int	ft_atoi(char *_str)
 {
 	int	_mns;
 	int	_rst;
@@ -45,22 +43,19 @@ int	ft_atoi
 	return (_rst);
 }
 
-void	ft_putstr
-(char *_str)
+void	ft_putstr(char *_str)
 {
 	if (!_str)
 		return ;
 	write(1, _str, ft_strlen(_str));
 }
 
-void	ft_putchar
-(char _chr)
+void	ft_putchar(char _chr)
 {
 	write(1, &_chr, 1);
 }
 
-void	ft_putnbr
-(int _num)
+void	ft_putnbr(int _num)
 {
 	unsigned int	_unm;
 

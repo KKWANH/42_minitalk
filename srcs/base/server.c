@@ -6,14 +6,13 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 17:14:07 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/25 18:49:01 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/25 19:17:06 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void	ft_server_handler
-(int _num, siginfo_t *_inf, void *_Ucontext)
+void	ft_server_handler(int _num, siginfo_t *_inf, void *_Ucontext)
 {
 	(void)_Ucontext;
 	if (_num == SIGUSR1)
@@ -32,8 +31,7 @@ void	ft_server_handler
 	kill(_inf->si_pid, SIGUSR1);
 }
 
-int	main
-(void)
+int	main(void)
 {
 	struct sigaction	_act;
 
