@@ -6,7 +6,7 @@
 #    By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/25 09:50:52 by kimkwanho         #+#    #+#              #
-#    Updated: 2021/10/25 19:00:24 by kimkwanho        ###   ########.fr        #
+#    Updated: 2021/10/25 19:25:00 by kimkwanho        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,17 +19,17 @@ SERVER_B		=	server_bonus
 CLIENT_B		=	client_bonus
 
 SERVER_SRCS		=	srcs/base/server.c \
-					srcs/utils/util1.c
+					srcs/util/util.c
 SERVER_OBJS		=	$(SERVER_SRCS:.c=.o)
 CLIENT_SRCS		=	srcs/base/client.c \
-					srcs/utils/util1.c
+					srcs/util/util.c
 CLIENT_OBJS		=	$(CLIENT_SRCS:.c=.o)
 
 SERVER_SRCS_B	=	srcs/base/server_bonus.c \
-					srcs/utils/util1.c
+					srcs/util/util.c
 SERVER_OBJS_B	=	$(SERVER_SRCS_B:.c=.o)
 CLIENT_SRCS_B	=	srcs/base/client_bonus.c \
-					srcs/utils/util1.c
+					srcs/util/util.c
 CLIENT_OBJS_B	=	$(CLIENT_SRCS_B:.c=.o)
 
 all: fclean

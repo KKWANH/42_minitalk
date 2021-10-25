@@ -6,12 +6,12 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:38:47 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/25 18:45:25 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/25 19:25:16 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_BONUS_H
-# define MINITALK_BONUS_H
+#ifndef MINITALK_H
+# define MINITALK_H
 
 # include <unistd.h>
 # include <stdio.h>
@@ -30,7 +30,7 @@
 # define ANSI_CYA "\e[0;36m"
 
 int	ft_strlen(char *_str);
-int ft_atoi(char *_str);
+int	ft_atoi(char *_str);
 void	ft_putstr(char *_str);
 void	ft_putchar(char _chr);
 void	ft_putnbr(int _num);
