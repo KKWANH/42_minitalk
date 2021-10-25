@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:38:47 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/25 18:41:50 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/25 19:19:32 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 # define ANSI_CYA "\e[0;36m"
 
 int	ft_strlen(char *_str);
-int ft_atoi(char *_str);
+int	ft_atoi(char *_str);
 void	ft_putstr(char *_str);
 void	ft_putchar(char _chr);
 void	ft_putnbr(int _num);

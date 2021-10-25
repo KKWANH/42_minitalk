@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:38:29 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/25 19:17:20 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/25 19:18:36 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ struct sigaction	ft_client_option(unsigned long int *_len, char **_arv)
 {
 	struct sigaction	_act;
 
-	*_len = ft_strlen(_arv[2]) + 1;	
+	*_len = ft_strlen(_arv[2]) + 1;
 	sigemptyset(&_act.sa_mask);
 	_act.sa_flags = 0;
 	_act.sa_handler = &_ft_client_bitChanger;
