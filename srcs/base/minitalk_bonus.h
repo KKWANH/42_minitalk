@@ -6,12 +6,12 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:38:47 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/25 19:25:16 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/25 19:27:47 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#ifndef MINITALK_BONUS_H
+# define MINITALK_BONUS_H
 
 # include <unistd.h>
 # include <stdio.h>
