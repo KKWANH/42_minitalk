@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:38:29 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/28 02:46:32 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/28 02:48:23 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,13 +108,13 @@ int	main(int _arc, char **_arv)
 
 	if (_arc != 3 || ft_is_numb(_arv[1]) == -1)
 		return (ft_putstr(ANSI_BLU "[MINITALK] " ANSI_RED "[ERROR] " ANSI_YEL
-			"./client [Server Pid] [Text]\n" ANSI_RES, -1));
+				"./client [Server Pid] [Text]\n" ANSI_RES, -1));
 	_pid = ft_atoi(_arv[1]);
 	_str = ft_strdup(_arv[2]);
 	_bit = ft_to_bit((_str = ft_char_append(_str, '\n')), 0, 0);
 	if (_bit == NULL)
 		return (ft_putstr(ANSI_BLU "[MINITALK] " ANSI_RED "[ERROR] " ANSI_YEL
-			"in bit allocation\n" ANSI_RES, 0));
+				"in bit allocation\n" ANSI_RES, 0));
 	g_client = ft_strdup("");
 	ft_send_pid(_pid, 0);
 	ft_send_msg(_pid, _bit);

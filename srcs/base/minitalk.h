@@ -6,12 +6,12 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:38:47 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/28 02:20:56 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/28 02:48:04 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_BONUS_H
-# define MINITALK_BONUS_H
+#ifndef MINITALK_H
+# define MINITALK_H
 
 # include <unistd.h>
 # include <signal.h>
@@ -24,7 +24,7 @@
 # define ANSI_RED "\e[0;31m"
 # define ANSI_GRE "\e[0;32m"
 # define ANSI_YEL "\e[0;33m"
-# define ANSI_BLU "\e[0;34m"
+# define ANSI_BLU "\e[0;34m"	
 # define ANSI_MAG "\e[0;35m"
 # define ANSI_CYA "\e[0;36m"
 
