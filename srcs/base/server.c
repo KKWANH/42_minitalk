@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 17:14:07 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/28 02:45:08 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/28 02:45:54 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,12 @@
 
 extern char	*g_client;
 
-// resets the global variable (25 line problem)
 static void	ft_del_global(void)
 {
 	free(g_client);
 	g_client = NULL;
 }
 
-// converts binary to ascii or unicode
-// returns the result as an integer
-// if it's not just for comparison it prints the character
 static int	ft_convert(char *_str, int _wrt)
 {
 	int				_pow;
@@ -47,9 +43,6 @@ static int	ft_convert(char *_str, int _wrt)
 	return (_chr);
 }
 
-// reads every bit and appends it to bits
-// if its a 8 bit ascii char or a 24 bit unicode char it converts it
-// the result gets printed and the server sends the client an ack
 static void	ft_confirm(int _sig)
 {
 	static char	*_bit;
@@ -79,10 +72,6 @@ static void	ft_confirm(int _sig)
 	}
 }
 
-// server.c - ft_get_pid
-//
-// safes all bits in a string and converts every byte to a char
-// the char will get appended to the client variable (PID)
 static void	ft_get_pid(int _sig)
 {
 	static char	*_bit;
@@ -106,10 +95,6 @@ static void	ft_get_pid(int _sig)
 	}
 }
 
-// server.c - main
-//
-// if it doens't have the client ID, takes 8 bytes as the client ID
-// otherwise it will decode the binary string and print it
 int	main(void)
 {
 	ft_putstr(ANSI_BLU "[MINITALK] " ANSI_RES

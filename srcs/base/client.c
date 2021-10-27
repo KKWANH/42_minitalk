@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:38:29 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/28 02:38:55 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/28 02:46:32 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 extern char	*g_client;
 
-// client.c - ft_signal
-//
-// always called when the server sends a signal
-// appends a to the global g_client so it can compare the length in the main
 static void	ft_signal(int _sig)
 {
 	char	*_tmp;
@@ -29,11 +25,6 @@ static void	ft_signal(int _sig)
 	}
 }
 
-// client.c - ft_send_msg
-//
-// send the binary message to the server
-// when 8 has sent, checks server response
-// waits. so the signals won't get ignored
 static void	ft_send_msg(int _pid, char *_str)
 {
 	size_t	_idx;
@@ -52,12 +43,6 @@ static void	ft_send_msg(int _pid, char *_str)
 	}
 }
 
-// client.c - ft_to_bit
-//
-// convert the string to bit
-// puts binary number at the end of result string
-// Q. why it is unsigned char?
-// A. to handle unicode.
 static char	*ft_to_bit(char *_str, size_t _idx, size_t _jdx)
 {
 	char	*_rst;
@@ -87,11 +72,6 @@ static char	*ft_to_bit(char *_str, size_t _idx, size_t _jdx)
 	return (_rst);
 }
 
-// client.c - ft_send_pid
-//
-// get client's pid and turn that to bit (free cid)
-// kill SIGUSR1 or SIGUSR2 as the bit
-// if the PID less than 8 chars, send 0/1 till it gets 8
 static void	ft_send_pid(int _pid, int _idx)
 {
 	char	*_cid;
@@ -120,16 +100,6 @@ static void	ft_send_pid(int _pid, int _idx)
 	free(_bit);
 }
 
-
-// client.c - main
-//
-// check the arguments
-// get bits, pid from the arguments
-// set g_clients
-// send pid, message
-// after that, send 00000000 to check
-// compare sended message's length and the argument string
-// print result alert and free other things
 int	main(int _arc, char **_arv)
 {
 	int		_pid;
