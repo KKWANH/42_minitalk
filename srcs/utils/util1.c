@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   util.c                                             :+:      :+:    :+:   */
+/*   util1.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 18:20:19 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/25 19:27:11 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/28 02:18:10 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../base/minitalk.h"
+#include "../base/minitalk_bonus.h"
 
-int	ft_strlen(char *_str)
+int	ft_strlen(const char *_str)
 {
 	int	_cnt;
 
@@ -43,11 +44,12 @@ int	ft_atoi(char *_str)
 	return (_rst);
 }
 
-void	ft_putstr(char *_str)
+int	ft_putstr(char *_str, int _rtn)
 {
 	if (!_str)
-		return ;
+		return (0);
 	write(1, _str, ft_strlen(_str));
+	return (_rtn);
 }
 
 void	ft_putchar(char _chr)

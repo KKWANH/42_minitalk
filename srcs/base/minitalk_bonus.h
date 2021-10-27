@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 10:38:47 by kimkwanho         #+#    #+#             */
-/*   Updated: 2021/10/25 19:33:04 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2021/10/28 02:18:21 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define MINITALK_BONUS_H
 
 # include <unistd.h>
-# include <stdio.h>
 # include <signal.h>
 # include <stdlib.h>
 
@@ -29,19 +28,18 @@
 # define ANSI_MAG "\e[0;35m"
 # define ANSI_CYA "\e[0;36m"
 
-int		ft_strlen(char *_str);
+int		ft_strlen(const char *_str);
 int		ft_atoi(char *_str);
-void	ft_putstr(char *_str);
+int		ft_putstr(char *_str, int _rtn);
 void	ft_putchar(char _chr);
 void	ft_putnbr(int _num);
+int		ft_is_numb(char *_str);
+char	*ft_strdup(const char *_str);
+void	*ft_calloc(size_t _cnt, size_t _siz);
+char	*ft_char_append(char *_str, char _chr);
+size_t	ft_strlcpy(char *_dst, const char *_src, size_t _siz);
+char	*ft_itoa(int n);
 
-typedef struct s_signal
-{
-	unsigned int	_bit;
-	char			_sym;
-	int				_pid;
-}					t_signal;
-
-t_signal			g_bites;
+char	*g_client;
 
 #endif

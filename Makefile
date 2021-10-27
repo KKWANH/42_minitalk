@@ -6,7 +6,7 @@
 #    By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/25 09:50:52 by kimkwanho         #+#    #+#              #
-#    Updated: 2021/10/25 19:25:00 by kimkwanho        ###   ########.fr        #
+#    Updated: 2021/10/28 02:17:22 by kimkwanho        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,17 +19,25 @@ SERVER_B		=	server_bonus
 CLIENT_B		=	client_bonus
 
 SERVER_SRCS		=	srcs/base/server.c \
-					srcs/util/util.c
+					srcs/utils/util1.c \
+					srcs/utils/util2.c \
+					srcs/utils/util3.c
 SERVER_OBJS		=	$(SERVER_SRCS:.c=.o)
 CLIENT_SRCS		=	srcs/base/client.c \
-					srcs/util/util.c
+					srcs/utils/util1.c \
+					srcs/utils/util2.c \
+					srcs/utils/util3.c
 CLIENT_OBJS		=	$(CLIENT_SRCS:.c=.o)
 
 SERVER_SRCS_B	=	srcs/base/server_bonus.c \
-					srcs/util/util.c
+					srcs/utils/util1.c \
+					srcs/utils/util2.c \
+					srcs/utils/util3.c
 SERVER_OBJS_B	=	$(SERVER_SRCS_B:.c=.o)
 CLIENT_SRCS_B	=	srcs/base/client_bonus.c \
-					srcs/util/util.c
+					srcs/utils/util1.c \
+					srcs/utils/util2.c \
+					srcs/utils/util3.c
 CLIENT_OBJS_B	=	$(CLIENT_SRCS_B:.c=.o)
 
 all: fclean
@@ -46,11 +54,11 @@ all: fclean
 
 bonus: fclean
 	@printf "\033[34m[MINITALK]\033[0m Building server : "
-	@$(CC) $(SERVER_SRCS_B) -o $(SERVER)
+	@$(CC) $(SERVER_SRCS_B) -o $(SERVER_B)
 	@sleep 0.1 && printf "\033[33m." && sleep 0.1 && printf "\033[33m." && sleep 0.1 && printf "\033[33m. "
 	@printf "\033[32mOK\033[0m\n"
 	@printf "\033[34m[MINITALK]\033[0m Building client : "
-	@$(CC) $(CLIENT_SRCS_B) -o $(CLIENT)
+	@$(CC) $(CLIENT_SRCS_B) -o $(CLIENT_B)
 	@sleep 0.1 && printf "\033[33m." && sleep 0.1 && printf "\033[33m." && sleep 0.1 && printf "\033[33m. "
 	@printf "\033[32mOK\n"
 	@make clean
